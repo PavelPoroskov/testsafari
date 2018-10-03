@@ -943,7 +943,9 @@ a.dropdown-item {
   margin-right: 1em; }
 
 .camp-period-date {
-  font-size: 16px; }
+  font-size: 16px;
+  width: 7em;
+  padding-left: 4px; }
 
 .camp-part-bottom {
   display: -ms-flexbox;
@@ -3158,7 +3160,7 @@ a.edlist-add-mitem {
   color: #353535;
   pointer-events: none; }
 
-.datatable {
+.dt0 {
   font-size: 18px;
   text-align: left;
   vertical-align: middle;
@@ -3166,85 +3168,108 @@ a.edlist-add-mitem {
   margin-left: 0;
   margin-right: 0;
   min-width: 100%;
-  width: 100%; }
-
-.datatable * th {
-  padding-left: 17px;
-  border: unset;
-  color: #929292;
-  font-weight: normal; }
-
-.datatable * td {
-  padding: 0;
-  border: unset; }
-
-.col {
-  min-width: 6rem; }
-
-.col > a, .col-checkbox > a, .col-number > a,
-.col > div, .col-checkbox > div, .col-number > div, .col-name > div {
-  height: 100%;
-  display: block;
-  text-decoration: none;
-  color: #353535;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  padding-left: 17px; }
-
-.col div, .col-checkbox div, .col-number div {
-  cursor: pointer; }
-
-.dt-row td {
-  height: inherit; }
-
-.col-name {
-  font-weight: bold; }
-  .col-name a {
-    text-decoration: none;
-    color: #353535; }
-
-.col-number {
-  max-width: 3em; }
-
-.dt-row {
-  width: 100%; }
-
-.col-buttons {
-  padding-right: 16px !important;
-  padding-left: 17px !important;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-align: center;
-      align-items: center; }
-
-.div-buttons {
-  visibility: hidden; }
-
-.dt-row:hover .div-buttons {
-  visibility: visible; }
-
-.col-buttons a {
-  margin-left: 16px; }
-
-.rowHead {
-  height: 50px;
-  background-color: white; }
-
-.dt-row {
-  height: 61px;
-  background-color: white; }
-
-.rowSpacerHead {
-  height: 3px;
-  background-color: transparent; }
-
-.rowSpacer {
-  height: 8px;
-  background-color: transparent; }
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  position: relative; }
+  .dt0__head {
+    height: 50px;
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative; }
+    .dt0__head__cell {
+      padding-left: 16px;
+      border: unset;
+      color: #929292;
+      font-weight: normal;
+      height: inherit;
+      min-width: 6rem;
+      padding-top: 0;
+      padding-bottom: 0; }
+      .dt0__head__cell--number {
+        min-width: unset !important;
+        max-width: 3em; }
+      .dt0__head__cell--buttons {
+        min-width: unset !important; }
+      .dt0__head__cell--checkbox {
+        min-width: unset !important; }
+  .dt0__headSpace {
+    height: 3px;
+    background-color: transparent; }
+  .dt0__row {
+    height: 61px;
+    background-color: white;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative; }
+    .dt0__row__cell {
+      min-width: 6rem;
+      padding-left: 16px;
+      border: unset;
+      height: inherit;
+      padding-top: 0;
+      padding-bottom: 0; }
+      .dt0__row__cell:first-child {
+        font-weight: bold; }
+      .dt0__row__cell--number {
+        min-width: unset !important;
+        max-width: 3em; }
+      .dt0__row__cell--buttons {
+        min-width: unset !important;
+        padding-right: 16px !important;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+        -ms-flex-align: center;
+            align-items: center; }
+      .dt0__row__cell--checkbox {
+        min-width: unset !important; }
+      .dt0__row__cell--ip {
+        max-width: 4em; }
+      .dt0__row__cell > div, .dt0__row__cell > a {
+        height: 100%;
+        display: block;
+        text-decoration: none;
+        color: #353535;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        cursor: pointer; }
+    .dt0__row > .dt0__row__cell:first-child:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      height: inherit;
+      -webkit-box-shadow: 0 8px 18px 0 rgba(210, 210, 210, 0.5);
+              box-shadow: 0 8px 18px 0 rgba(210, 210, 210, 0.5);
+      pointer-events: none;
+      -webkit-transition: -webkit-box-shadow 0.16s 0.025s;
+      transition: -webkit-box-shadow 0.16s 0.025s;
+      -o-transition: box-shadow 0.16s 0.025s;
+      transition: box-shadow 0.16s 0.025s;
+      transition: box-shadow 0.16s 0.025s, -webkit-box-shadow 0.16s 0.025s; }
+    .dt0__row:hover > .dt0__row__cell:first-child:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      height: inherit;
+      -webkit-box-shadow: 0 8px 38px 0 rgba(185, 185, 185, 0.7);
+              box-shadow: 0 8px 38px 0 rgba(185, 185, 185, 0.7); }
+    .dt0__row__buttons {
+      visibility: hidden; }
+    .dt0__row:hover .dt0__row__buttons {
+      visibility: visible; }
+  .dt0__rowSpace {
+    height: 8px;
+    background-color: transparent; }
 
 .ListView-cards {
   display: -ms-flexbox;
@@ -3271,17 +3296,6 @@ a.edlist-add-mitem {
   color: #353535; }
 
 .Card:hover {
-  -webkit-box-shadow: 0 8px 38px 0 rgba(185, 185, 185, 0.7);
-          box-shadow: 0 8px 38px 0 rgba(185, 185, 185, 0.7); }
-
-.dt-row {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-box-shadow: 0 8px 18px 0 rgba(210, 0, 0, 0.5);
-          box-shadow: 0 8px 18px 0 rgba(210, 0, 0, 0.5); }
-
-.dt-row:hover {
   -webkit-box-shadow: 0 8px 38px 0 rgba(185, 185, 185, 0.7);
           box-shadow: 0 8px 38px 0 rgba(185, 185, 185, 0.7); }
 
@@ -3400,7 +3414,6 @@ a.edlist-add-mitem {
           box-sizing: border-box;
   padding-left: 8px;
   padding-bottom: 0;
-  padding-top: 2px;
   background-color: white;
   font-size: 18px; }
 
@@ -3493,13 +3506,13 @@ div.msg-load {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center; }
-</style><script type="text/javascript" charset="utf-8" src="./index_files/0.48e72154cdaec55d449b.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./index_files/0.af914309884d7d9a2314.hot-update.js"></script></head>
+</style></head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="modal-root"></div>
-    <div id="root"><div class="MainScreen" id="main-screen"><div class="Header-container"><div class="Header"><a class="Logo-cont" href="http://localhost:3000/campaigns"><div class="Logo"></div></a><div class="msec-container"><ul class="msec"><li class="msec-li"><a class="active" aria-current="true" href="http://localhost:3000/campaigns">Campaigns</a></li><li class="msec-li"><a aria-current="false" href="http://localhost:3000/reports">Reports</a></li><li class="msec-li"><a aria-current="false" href="http://localhost:3000/brands">Brands</a></li><li class="msec-li"><a aria-current="false" href="http://localhost:3000/groups">Groups</a></li><li class="msec-li"><a aria-current="false" href="http://localhost:3000/users">Users</a></li></ul><div class="msec-bar0" style="transform: translateX(0px) scaleX(0.202391); transition-duration: 0.25s;"></div></div><div class="CurrentUser-cmp"><div class="dropdown is-hoverable"><a class="CurrentUser-trg dropdown-trigger">test admin 1 test admin 2 test admin 3<span class="signdown"><i class="ion ion-android-arrow-dropdown"></i></span></a><div class="dropdown-menu"><div class="dropdown-content"><div class="dropdown-begin"></div><a class="dropdown-item" href="http://localhost:3000/profile">Profile</a><div class="dropdown-separator"></div><a class="dropdown-item" href="http://localhost:3000/sign-out">Logout</a><div class="dropdown-begin"></div></div></div></div></div></div></div><div class="main-content-container"><div class="main-content"><div class="content"><div class="content-header"><div class="sub-h1">Campaigns</div></div><div class="flt"><div class="search"><input type="text" id="main-fsubstr" value=""><div class="signsearch"><i class="ion ion-ios-search-strong"></i></div></div><div class="switch-container"><div class="flt-switch"><a name="all" class="flt-switch-opt">All</a><a name="active" class="flt-switch-opt active">Active</a><a name="completed" class="flt-switch-opt">Completed</a><a name="alert" class="flt-switch-opt"><div class="fsw-alert markAlert" name="alert"></div></a></div></div><div class="addbtn-container"><a class="btn-add"><div class="signadd"><i class="ion ion-ios-plus-outline"></i></div>New campaign</a></div></div><div class="list-view"><div class="switch-view-container"><div class="switch-view"><div data-id="cards" class="switch-view-opt"><div class="mark_cards"></div><div class="switch-view-opt-name">Cards</div></div><div data-id="table" class="switch-view-opt active"><div class="mark_list"></div><div class="switch-view-opt-name">List</div></div></div></div><div class="ListView"><div><table class="datatable"><thead><tr class="rowHead"><th class="col">Title</th><th class="col">Brand</th><th class="col">Counters</th><th></th></tr><tr class="rowSpacerHead"><th></th></tr></thead><tbody><tr class="dt-row"><td class="col col-name"><a href="http://localhost:3000/campaigns/1">Mcd_Deserts_Sept-Oct' id1</a></td><td class="col"><a href="http://localhost:3000/campaigns/1">McDonalds</a></td><td class="col"><a href="http://localhost:3000/campaigns/1"><span>CLK</span>&nbsp;<strong class="">6k</strong><span>,&nbsp; </span><span>CTR</span>&nbsp;<strong class="">6.92</strong><span>,&nbsp; </span><span>IMP</span>&nbsp;<strong class="">3253k</strong></a></td><td class="col-buttons"><div class="div-buttons"><div data-id="1" class="btn-edit"><i class="ion ion-edit signedit"></i></div></div></td></tr><tr class="rowSpacer"><th></th></tr><tr class="dt-row"><td class="col col-name"><a href="http://localhost:3000/campaigns/2">Mcd_Deserts_Sept-Oct'17_CPM (29.09 - 31.10)_Instagram — TrendSetters</a></td><td class="col"><a href="http://localhost:3000/campaigns/2">McDonalds</a></td><td class="col"><a href="http://localhost:3000/campaigns/2"><span>CLK</span>&nbsp;<strong class="">6k</strong><span>,&nbsp; </span><span>CTR</span>&nbsp;<strong class="">6.92</strong><span>,&nbsp; </span><span>IMP</span>&nbsp;<strong class="">3253k</strong></a></td><td class="col-buttons"><div class="div-buttons"><div data-id="2" class="btn-edit"><i class="ion ion-edit signedit"></i></div></div></td></tr><tr class="rowSpacer"><th></th></tr><tr class="dt-row"><td class="col col-name"><a href="http://localhost:3000/campaigns/3">Mcd Chicken Gourmet Exotic CPM IG (01.03-22.04)</a></td><td class="col"><a href="http://localhost:3000/campaigns/3">McDonalds</a></td><td class="col"><a href="http://localhost:3000/campaigns/3"><span>CLK</span>&nbsp;<strong class="">3k</strong><span>,&nbsp; </span><span>CTR</span>&nbsp;<strong class="">1.58</strong><span>,&nbsp; </span><span>IMP</span>&nbsp;<strong class="">9786k</strong></a></td><td class="col-buttons"><div class="div-buttons"><div data-id="3" class="btn-edit"><i class="ion ion-edit signedit"></i></div></div></td></tr><tr class="rowSpacer"><th></th></tr><tr class="dt-row"><td class="col col-name"><a href="http://localhost:3000/campaigns/4">Mcd id4 Weborama</a></td><td class="col"><a href="http://localhost:3000/campaigns/4">McDonalds</a></td><td class="col"><a href="http://localhost:3000/campaigns/4"></a></td><td class="col-buttons"><div class="div-buttons"><div data-id="4" class="btn-edit"><i class="ion ion-edit signedit"></i></div></div></td></tr></tbody></table></div></div></div></div></div></div></div></div>
+    <div id="root"><div class="MainScreen" id="main-screen"><div class="Header-container"><div class="Header"><a class="Logo-cont" href="http://localhost:3000/campaigns"><div class="Logo"></div></a><div class="msec-container"><ul class="msec"><li class="msec-li"><a aria-current="true" href="http://localhost:3000/campaigns" class="active">Campaigns</a></li><li class="msec-li"><a aria-current="false" href="http://localhost:3000/reports">Reports</a></li><li class="msec-li"><a aria-current="false" href="http://localhost:3000/brands">Brands</a></li><li class="msec-li"><a aria-current="false" href="http://localhost:3000/groups">Groups</a></li><li class="msec-li"><a aria-current="false" href="http://localhost:3000/users">Users</a></li></ul><div class="msec-bar0" style="transform: translateX(0px) scaleX(0.202391); transition-duration: 0.25s;"></div></div><div class="CurrentUser-cmp"><div class="dropdown is-hoverable"><a class="CurrentUser-trg dropdown-trigger">test admin 1 test admin 2 test admin 3<span class="signdown"><i class="ion ion-android-arrow-dropdown"></i></span></a><div class="dropdown-menu"><div class="dropdown-content"><div class="dropdown-begin"></div><a class="dropdown-item" href="http://localhost:3000/profile">Profile</a><div class="dropdown-separator"></div><a class="dropdown-item" href="http://localhost:3000/sign-out">Logout</a><div class="dropdown-begin"></div></div></div></div></div></div></div><div class="main-content-container"><div class="main-content"><div class="content"><div class="content-header"><div class="sub-h1">Campaigns</div></div><div class="flt"><div class="search"><input type="text" id="main-fsubstr" value=""><div class="signsearch"><i class="ion ion-ios-search-strong"></i></div></div><div class="switch-container"><div class="flt-switch"><a name="all" class="flt-switch-opt">All</a><a name="active" class="flt-switch-opt active">Active</a><a name="completed" class="flt-switch-opt">Completed</a><a name="alert" class="flt-switch-opt"><div class="fsw-alert markAlert" name="alert"></div></a></div></div><div class="addbtn-container"><a class="btn-add"><div class="signadd"><i class="ion ion-ios-plus-outline"></i></div>New campaign</a></div></div><div class="list-view"><div class="switch-view-container"><div class="switch-view"><div data-id="cards" class="switch-view-opt"><div class="mark_cards"></div><div class="switch-view-opt-name">Cards</div></div><div data-id="table" class="switch-view-opt active"><div class="mark_list"></div><div class="switch-view-opt-name">List</div></div></div></div><div class="ListView"><div><table class="dt0"><thead><tr class="dt0__head"><th class="dt0__head__cell">Title</th><th class="dt0__head__cell">Brand</th><th class="dt0__head__cell">Counters</th><th class="dt0__head__cell dt0__head__cell--buttons"> </th></tr><tr class="dt0__headSpace"></tr></thead><tbody><tr class="dt0__row"><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/1">Mcd_Deserts_Sept-Oct' id1</a></td><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/1">McDonalds</a></td><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/1"><span>CLK</span>&nbsp;<strong class="">6k</strong><span>,&nbsp; </span><span>CTR</span>&nbsp;<strong class="">6.92</strong><span>,&nbsp; </span><span>IMP</span>&nbsp;<strong class="">3253k</strong></a></td><td class="dt0__row__cell dt0__row__cell--buttons"><div class="dt0__row__buttons"><div class="objButtons"><div class="objButtons__btn" data-id="1"><i class="objButtons__btn__icon ion ion-edit signedit"></i></div></div></div></td></tr><tr class="dt0__rowSpace"><th></th></tr><tr class="dt0__row"><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/2">Mcd_Deserts_Sept-Oct'17_CPM (29.09 - 31.10)_Instagram — TrendSetters</a></td><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/2">McDonalds</a></td><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/2"><span>CLK</span>&nbsp;<strong class="">6k</strong><span>,&nbsp; </span><span>CTR</span>&nbsp;<strong class="">6.92</strong><span>,&nbsp; </span><span>IMP</span>&nbsp;<strong class="">3253k</strong></a></td><td class="dt0__row__cell dt0__row__cell--buttons"><div class="dt0__row__buttons"><div class="objButtons"><div class="objButtons__btn" data-id="2"><i class="objButtons__btn__icon ion ion-edit signedit"></i></div></div></div></td></tr><tr class="dt0__rowSpace"><th></th></tr><tr class="dt0__row"><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/3">Mcd Chicken Gourmet Exotic CPM IG (01.03-22.04)</a></td><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/3">McDonalds</a></td><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/3"><span>CLK</span>&nbsp;<strong class="">3k</strong><span>,&nbsp; </span><span>CTR</span>&nbsp;<strong class="">1.58</strong><span>,&nbsp; </span><span>IMP</span>&nbsp;<strong class="">9786k</strong></a></td><td class="dt0__row__cell dt0__row__cell--buttons"><div class="dt0__row__buttons"><div class="objButtons"><div class="objButtons__btn" data-id="3"><i class="objButtons__btn__icon ion ion-edit signedit"></i></div></div></div></td></tr><tr class="dt0__rowSpace"><th></th></tr><tr class="dt0__row"><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/4">Mcd id4 Weborama</a></td><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/4">McDonalds</a></td><td class="dt0__row__cell"><a href="http://localhost:3000/campaigns/4"></a></td><td class="dt0__row__cell dt0__row__cell--buttons"><div class="dt0__row__buttons"><div class="objButtons"><div class="objButtons__btn" data-id="4"><i class="objButtons__btn__icon ion ion-edit signedit"></i></div></div></div></td></tr><tr class="dt0__rowSpace"><th></th></tr></tbody></table></div></div></div></div></div></div></div></div>
     <div id="message-root"></div>
   <script type="text/javascript" src="./index_files/bundle.js"></script>
 
